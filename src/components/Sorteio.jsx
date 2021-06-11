@@ -6,13 +6,14 @@ import Card from './Card'
 const Sorteio = props => {
 
     const { min, max } = props
+    const rand = parseInt(Math.random() * (max - min) + min)
 
     return(
         <Card title="Sorteio de um número" purple>
             <div>
                 <span>
                     <strong>Resultado: </strong>
-                    <span>{ parseInt(Math.random() * (max - min) + min) }</span>
+                    <span>{ rand }</span>
                 </span>
             </div>
         </Card>
