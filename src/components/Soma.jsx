@@ -3,14 +3,12 @@ import Card from './Card'
 
 export default props => {
 
-    const { min, max } = props
-
     return(
         <Card title="Soma dos números" green>
             <div>
                 <span>
                     <strong>Resultado: </strong>
-                    <span>{ max + min }</span>
+                    <span>3</span>
                 </span>
             </div>
         </Card>
