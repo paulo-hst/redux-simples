@@ -9,7 +9,6 @@ import './Intervalo.css'
 function Intervalo(props){
 
     const { min, max } = props
-    props.alterarMinimo(1000)
 
     return(
         <Card title="Intervalo de números" blue>
@@ -19,7 +18,7 @@ function Intervalo(props){
                     <input 
                         type="number"
                         value={min}
-                        readOnly
+                        onChange={event => props.alterarMinimo(+event.target.value)}
                     />
                 </span>
                 <span>
@@ -43,7 +42,7 @@ function mapStateToProps(state){
     }
 }
 
-function mapActionCreatorsToProps(dispatch){
+function mapDispachToProps(dispatch){
     return{
         alterarMinimo(novoNumero){
             // Action creator / retorna action
@@ -53,4 +52,4 @@ function mapActionCreatorsToProps(dispatch){
     }
 }
 
-export default connect(mapStateToProps, mapActionCreatorsToProps)(Intervalo)
+export default connect(mapStateToProps, mapDispachToProps)(Intervalo)
