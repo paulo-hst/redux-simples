@@ -8,7 +8,7 @@ const reducers = combineReducers({
             max: 10
         }
     },
-    nomes: function(){
+    nomes: function(state, action){
         console.log(state, ' ', action)
         return[
             'Paulo',
